@@ -12,7 +12,7 @@ public class EmployeeWage {
     public static void main(String[] args) {
         System.out.println("Welcome to Employee + Wage Computation Program");
 
-        int employeeCheck = (int) Math.floor(Math.random()*10) %2;
+        int employeeCheck = (int) Math.floor(Math.random()*10) %3;
 
         int wage = 0;
 
