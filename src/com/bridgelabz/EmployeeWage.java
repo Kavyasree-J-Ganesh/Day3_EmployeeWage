@@ -16,20 +16,25 @@ public class EmployeeWage {
 
         int wage = 0;
         int totalwage = 0;
+        int totalHours = 0;
+        int totaldays = 1;
 
-        for(int i=0;i<NUM_DAYS_IN_MONTH;i++){
+        while(totaldays <=20 && totalHours<=20){
             int employeeCheck = (int) Math.floor(Math.random()*10) %3;
             switch(employeeCheck){
                 case FULL_TIME_EMPLOYEE:
                     wage = FULL_DAY_HOUR * WAGE_PER_HOUR;
+                    totalHours+= FULL_DAY_HOUR;
                     break;
                 case PART_TIME_EMPLOYEE:
                     wage = PART_TIME_HOUR * WAGE_PER_HOUR;
+                    totalHours+= PART_TIME_HOUR;
                     break;
                 default:
                     wage = 0;
             }
             totalwage = totalwage+wage;
+            totaldays++;
         }
 
         System.out.println(totalwage);
