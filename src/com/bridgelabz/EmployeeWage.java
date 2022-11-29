@@ -11,9 +11,11 @@ public class EmployeeWage {
 
     static final int NUM_DAYS_IN_MONTH = 20;
 
-    public static void main(String[] args) {
+    static void printWelcome(){
         System.out.println("Welcome to Employee + Wage Computation Program");
+    }
 
+    static void getTotalWage(){
         int wage = 0;
         int totalwage = 0;
         int totalHours = 0;
@@ -38,6 +40,12 @@ public class EmployeeWage {
         }
 
         System.out.println(totalwage);
+    }
+
+    public static void main(String[] args) {
+        printWelcome();
+        getTotalWage();
+
     }
 }
 
