@@ -1,6 +1,7 @@
 package com.bridgelabz;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class EmployeeWage {
 
@@ -28,6 +29,7 @@ public class EmployeeWage {
     }
 
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
         printWelcome();
         CompanyEmpWage infosys = new CompanyEmpWage("infosys",1000,400,20);
         infosys.getTotalWage();
@@ -37,6 +39,14 @@ public class EmployeeWage {
         addToList(infosys);
 
         displayCompanyList();
+
+        System.out.println("Enter company name to query total wage");
+        String company = scan.next();
+        for(int i=0;i<companyList.size();i++){
+            if(companyList.get(i).companyName.equals(company)){
+                System.out.println("Total wage of employee in " + company + " is " + companyList.get(i).totalWage);
+            }
+        }
     }
 }
 
