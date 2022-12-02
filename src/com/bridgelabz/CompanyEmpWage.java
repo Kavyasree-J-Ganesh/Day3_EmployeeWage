@@ -22,6 +22,8 @@ public class CompanyEmpWage {
     int wagePerHour;
     int workingDaysInMonth;
 
+
+
     void getTotalWage(){
         int wage = 0;
         int totalwage = 0;
@@ -46,6 +48,6 @@ public class CompanyEmpWage {
             totaldays++;
         }
 
-        System.out.println(totalwage);
+        this.totalWage = totalwage;
     }
 }
